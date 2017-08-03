@@ -1,0 +1,5 @@
+<h1>All Attractions</h1>
+
+<%= render partial: "attractions", collection: @attractions %>
+
+<%= link_to "New Attraction", new_attraction_path if current_user.admin %>

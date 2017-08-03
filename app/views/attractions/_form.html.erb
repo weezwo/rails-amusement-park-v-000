@@ -1,0 +1,25 @@
+<%= form_for @attraction do |f| %>
+
+  <% if @attraction.errors.any? %>
+    <% @attraction.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  <% end %>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :min_height, "Height (in inches)" %> <br>
+  <%= f.text_field :min_height %><br>
+  <br>
+  <%= f.label :happiness_rating, "On a scale of 1-5, how happy are you?" %>
+  <%= f.number_field :happiness_rating %> <br>
+
+  <%= f.label :nausea_rating, "On a scale of 1-5, how nauseous are you?" %>
+  <%= f.number_field :nausea_rating %> <br>
+  <br>
+  <%= f.label :tickets, "How many dollars do you have in your pocket?" %> <br>
+  <%= f.text_field :tickets %><br><br>
+
+  <%= f.submit %>
+<% end %>

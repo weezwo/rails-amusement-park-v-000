@@ -34,6 +34,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'devise'
+
 group :test, :development do
   gem "rspec-rails"
   gem "capybara"

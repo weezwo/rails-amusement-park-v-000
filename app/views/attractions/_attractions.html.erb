@@ -1,0 +1,8 @@
+<%= attractions.name %> -
+<%if is_admin? %>
+  <%= link_to("Show #{attractions.name}", attraction_path(attractions)) %> -
+  <%= link_to("Edit #{attractions.name}", edit_attraction_path(attractions)) %>
+<% else %>
+  <%= link_to("Go on #{attractions.name}", attraction_path(attractions)) %>
+<% end %>
+<br>

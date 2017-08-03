@@ -1,3 +1,10 @@
 class User < ActiveRecord::Base
-  # write associations here
+  has_secure_password
+  has_many :rides
+  has_many :attractions, through: :rides
+
+  def mood
+    return "happy" if self.happiness > self.nausea
+    "sad"
+  end
 end
